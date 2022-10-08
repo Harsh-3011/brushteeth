@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Square Loading box</title>
+	<style>
+		body,html{
+			width: 100;
+			height: 100;
+			text-align: center;
+			}
+		body{
+			background-color: #2A2734;
+			}
+		
+		.text-center{
+			color: white;
+			font-weight: 20em;
+			font-size: 5em;
+			font-family: calibri;
+			margin-top: 25%;
+		}
+		.loader{
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			position: relative;
+			border: 4px solid #E57F7F;
+			top: 100%;
+			animation: loader 2s infinite ease;
+		}
+		.loader-inner{
+			vertical-align: top;
+			display: inline-block;
+			width: 100%;
+			background-color: #CC0000;
+			animation: loader-inner 2s infinite ease-in;
+		}
+		@keyframes loader{
+			0%{
+				transform: rotate(0deg);
+			}
+			25%{
+				transform: rotate(180deg);
+			}
+			50%{
+				transform: rotate(180deg);
+			}
+			75%{
+				transform: rotate(360deg);
+			}
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes loader-inner{
+			0%{
+				height: 0%;
+			}
+			25%{
+				height: 0%;
+			}
+			50%{
+				height: 100%;
+			}
+			75%{
+				height: 100%;
+			}
+			100%{
+				height: 0%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header class="text-center col-12">
+		<span class="loader">
+			<span class="loader-inner"></span>
+		</span>
+		<br>
+		<span class="loading">LOADING...
+		</span>
+	</header>
+</body>
+</html>
